@@ -9,12 +9,12 @@ export default defineConfig({
     port : 5173,
     proxy: {
         '/api': {
-            target: 'http://localhost:8080',
+            target: 'https://dashboard.heroku.com/apps/hbv1-db',
             changeOrigin: true,
             secure: false
         },
         '/oauth2': {
-            target: 'http://localhost:8080',
+            target: 'https://dashboard.heroku.com/apps/hbv1-db',
             changeOrigin: true,
             secure: false
         }
