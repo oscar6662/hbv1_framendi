@@ -18,7 +18,7 @@ export const ParentSignUp = () => {
     setLoading(true);
     const { confirmPassword, ...rest } = values;
 
-    const userFetch = await fetch(`${link}/api/parentexists/${values.ssn}`);
+    const userFetch = await fetch(`/api/parentexists/${values.ssn}`);
     const userExists = await userFetch.json();
 
     if (userExists) {

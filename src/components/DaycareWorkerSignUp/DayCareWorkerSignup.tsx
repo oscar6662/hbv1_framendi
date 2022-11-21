@@ -30,7 +30,7 @@ export const DayCareWorkerSignup = ({ locations, loading }: Props) => {
       ...rest,
     };
 
-    const userFetch = await fetch(`${link}/api/daycareworkerexists/${data.ssn}`);
+    const userFetch = await fetch(`/api/daycareworkerexists/${data.ssn}`);
     const userExists = await userFetch.json();
 
     if (userExists) {
@@ -45,7 +45,7 @@ export const DayCareWorkerSignup = ({ locations, loading }: Props) => {
       body: JSON.stringify(data),
     };
 
-    const register = await fetch(`${link}/api/adddaycareworker`, options);
+    const register = await fetch(`/api/adddaycareworker`, options);
 
     if (!register.ok) {
       message.error('Failed');

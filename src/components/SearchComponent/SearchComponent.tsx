@@ -68,7 +68,7 @@ export const SearchComponent = (props: Props) => {
   useEffect(() => {
     const fetchLoactions = async () => {
       setLoading(true);
-      const result = await fetch(`${link}/api/locations`);
+      const result = await fetch(`/api/locations`);
 
       if (!result.ok) {
         console.error('Villa!');
@@ -86,7 +86,7 @@ export const SearchComponent = (props: Props) => {
   const fetchDaycareWorkers = async () => {
     setLoading(true);
     const daycareWorkers = await fetch(
-      `${link}/api/daycareworkers${location ? `?locationCode=${location}` : ''}`
+      `/api/daycareworkers${location ? `?locationCode=${location}` : ''}`
     );
 
     if (daycareWorkers.ok && daycareWorkers.status !== 204) {

@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: true,
-    port : 5173,
     proxy: {
         '/api': {
             target: 'https://dashboard.heroku.com/apps/hbv1-db',

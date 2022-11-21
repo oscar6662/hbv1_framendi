@@ -13,7 +13,7 @@ const Register = () => {
   useEffect(() => {
     const fetchLoactions = async () => {
       setLoading(true);
-      const result = await fetch(`${link}/api/locations`);
+      const result = await fetch(`/api/locations`);
 
       if (!result.ok) {
         console.error('Villa!');
