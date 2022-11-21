@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "vite build",
+    "start": "npm install && vite build",
     "preview": "vite preview",
     "update-theme": "lessc ./src/theme.less ./src/theme.css --js"
   },
