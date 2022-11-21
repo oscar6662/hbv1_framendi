@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "npm install && npm run build",
-    "build": "react-scripts build",
-    "preview": "vite preview",
+    "build": "tsc && vite build",
+    "postinstall": "npm run build",
+    "serve-heroku": "vite --host 0.0.0.0 --port $PORT preview",
     "update-theme": "lessc ./src/theme.less ./src/theme.css --js"
   },
   "dependencies": {
@@ -21,7 +21,6 @@
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.4",
     "react-router-dom": "^6.4.1",
-    "react-scripts": "^5.0.1",
     "redux-thunk": "^2.4.1",
     "styled-components": "^5.3.6"
   },
