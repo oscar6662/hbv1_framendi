@@ -47,7 +47,7 @@ interface Location {
   locationName: string;
 }
 
-const link = 'http://localhost:8080';
+const link = 'https://dashboard.heroku.com/apps/hbv1-db';
 
 export const SearchComponent = (props: Props) => {
   const [form] = Form.useForm();
@@ -68,7 +68,7 @@ export const SearchComponent = (props: Props) => {
   useEffect(() => {
     const fetchLoactions = async () => {
       setLoading(true);
-      const result = await fetch(`/api/locations`);
+      const result = await fetch(`${link}/api/locations`);
 
       if (!result.ok) {
         console.error('Villa!');
@@ -86,7 +86,7 @@ export const SearchComponent = (props: Props) => {
   const fetchDaycareWorkers = async () => {
     setLoading(true);
     const daycareWorkers = await fetch(
-      `/api/daycareworkers${location ? `?locationCode=${location}` : ''}`
+      `${link}/api/daycareworkers${location ? `?locationCode=${location}` : ''}`
     );
 
     if (daycareWorkers.ok && daycareWorkers.status !== 204) {
