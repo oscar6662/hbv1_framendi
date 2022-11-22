@@ -47,7 +47,7 @@ interface Location {
   locationName: string;
 }
 
-const link = 'https://dashboard.heroku.com/apps/hbv1-db';
+const link = 'https://hbv1-db.herokuapp.com';
 
 export const SearchComponent = (props: Props) => {
   const [form] = Form.useForm();
