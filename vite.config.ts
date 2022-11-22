@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: true,
+    host: false,
     proxy: {
         '/api': {
             target: 'https://dashboard.heroku.com/apps/hbv1-db',
