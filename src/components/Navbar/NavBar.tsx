@@ -11,6 +11,10 @@ type Props = {
 
 export const NavBar = ({ isOnMyPage }: Props) => {
   const { isLoggedIn, userName, type, userId } = useSelector(authSelector);
+  const {
+    isAuthenticated,
+    loginWithRedirect,
+  } = useAuth0();
 
   return (
     <>
@@ -35,8 +39,9 @@ export const NavBar = ({ isOnMyPage }: Props) => {
                 Nýskráning
               </Button>
               <Button
-                href="http://localhost:8080/oauth2/authorization/auth0"
+                // href="http://localhost:8080/oauth2/authorization/auth0"
                 className="navMenuItem"
+                onClick={loginWithRedirect}
                 type="primary"
                 size="large"
               >
