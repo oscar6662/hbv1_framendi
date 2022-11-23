@@ -35,7 +35,7 @@ export const NavBar = ({ isOnMyPage }: Props) => {
                 Nýskráning
               </Button>
               <Button
-                href="/oauth2/authorization/auth0"
+                href="http://localhost:8080/oauth2/authorization/auth0"
                 className="navMenuItem"
                 type="primary"
                 size="large"
